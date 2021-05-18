@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+
+
+            <h3> MAKE YOUR ORDER NOW!</h3>
+           
+            <form method="POST" action="{{ url_for('make_order') }}">
+
+                {{ form.csrf_token }}
+                {{ form.colour.label }} {{ form.colour(size=20) }}
+                {{ form.type.label }} {{ form.type(size=20) }}
+                {{ form.size.label }} {{ form.size(size=20) }}
+
+                <input type="submit" value="Make My Order">
+
+            </form>
+</div>
+{% endblock %}
+        
